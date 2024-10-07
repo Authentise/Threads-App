@@ -117,7 +117,7 @@ def post_message(thread_id: int, message: str):
         headers={**_required_headers()}
     )
 
-    # You've just posted a comment! You can retrieve the thread's messages to verify
+    # You've just posted a message! You can retrieve the thread's messages to verify
     get_messages(thread_id)
 
 def get_messages(thread_id: int):
