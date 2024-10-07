@@ -22,7 +22,9 @@ def main():
     password = sys.argv[2]
 
     # Authenticate
-    login(email, password)
+    if not login(email, password):
+        print("Failed to login. Check your credentials and try again.")
+        sys.exit(1)
 
     # Ready to start using the API!
 
