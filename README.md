@@ -4,9 +4,11 @@ This is a guide for accessing the Threads API.
 
 You should already have your Threads credentials. If not, contact <EMAIL> for help.
 
-The API mainly uses JSON for request and response payloads. See [the OpenAPI spec](https://api.threads.dev-auth2.com/swagger/) for a list of the available endpoints.
-
 You can use any programming language for this project, but Python is preferred. We've provided some example code in Python to help you get started.
+
+## API Docs
+
+You will interact with Threads via it's JSON API. See [the Swagger doc](https://api.threads.dev-auth2.com/swagger/) for a list of the available endpoints and their schemas
 
 ## Python Walkthrough
 
