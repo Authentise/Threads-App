@@ -3,11 +3,19 @@
 
 We want to enable you to develop an App for Threads. An app is a tool that does something fancy with a file or a comment that's been uploaded to Threads. For example, [Plyable has an app on Threads](https://www.authentise.com/post/authentise-threads-addresses-engineering-bottlenecks-with-integrations). The Plyable app will take a STEP file uploaded to Threads, and provide a composite mold design plus associated quote and delivery information. If you're interested in creating an app of your own that could analyze a file, or provide associated information, please [contact us](https://www.authentisethreads.com/about-us/contact-us) for your username and password to access a development instance of Threads. 
 
-You can use any programming language for this project, but Python is preferred. We've provided some example code in Python to help you get started.
+You can use any programming language for this project, but Python is preferred. We've provided some example code in Python to help you get started. 
 
 ## API Docs
 
-You will interact with Threads via its JSON API. See [the Swagger doc](https://api.threads.dev-auth2.com/swagger/) for a list of the available endpoints and their schemas
+You will interact with Threads via its JSON API. See [the Swagger doc](https://api.threads.dev-auth2.com/swagger/) for a list of the available endpoints and their schemas. Note that these are still in development. If you have any comments, please contact us. 
+
+## App Publications
+
+Once you're happy with your app and want to submit it for general distribution, please contact threads@authentise.com with a link to your repo. We'll check it and get back to you before we turn it live. The process will be a bit like this:
+* Share a github repo 
+* We can package it into an app, and will show you what do
+* We package it into a docker image we can run on AWS instance  (internal note: get mani to do this, and do a test-run)
+* We do some very basic QA, and atach aarms
 
 ## Python Walkthrough
 
