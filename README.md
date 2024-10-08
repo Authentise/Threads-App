@@ -1,7 +1,7 @@
 # Threads API 
 Threads is an engineering collaboration tool by Authentse. Physical parts design often needs input and controls from multiple stakeholders (departments)  with different goals or needs. It coordinates goal-oriented conversation to make sure a part design fit all of the needs and restrictions. In short, it's a verified and controlled way to quickly move from 'Idea' to 'Final Part Design.'
 
-We want to enable you to develop an App for Threads. If you're interested, please contact us for your username and password to access to a development instance of Threads. 
+We want to enable you to develop an App for Threads. An app is a tool that does something fancy with a file or a comment that's been uploaded to Threads. For example, [Plyable has an app on Threads](https://www.authentise.com/post/authentise-threads-addresses-engineering-bottlenecks-with-integrations). The Plyable app will take a STEP file uploaded to Threads, and provide a composite mold design plus associated quote and delivery information. If you're interested in creating an app of your own that could analyze a file, or provide associated information, please [contact us](https://www.authentisethreads.com/about-us/contact-us) for your username and password to access a development instance of Threads. 
 
 You can use any programming language for this project, but Python is preferred. We've provided some example code in Python to help you get started.
 
