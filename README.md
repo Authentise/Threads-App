@@ -1,8 +1,7 @@
 # Threads API 
+Threads is a product by Authentse, Inc. used for tracked, versioned conversation. Physical parts design often needs input and controls from multiple stakeholders (departments)  with different goals or needs. It coordinates goal-oriented conversation to make sure a part design fit all of the needs and restrictions.  In short, it's a veified and controlled way to quickly move from 'Part Idea' to 'Final Part Design.'
 
-This is a guide for accessing the Threads API.
-
-You should already have your Threads credentials. If not, contact <EMAIL> for help.
+Authentise has partnerned with Georgia Tech to give students access to the system, to build their own data processing tools, and get real life API experience.  IF you are a member of that project, please look for an email with introduction slides, and your username and password to access Threads. 
 
 You can use any programming language for this project, but Python is preferred. We've provided some example code in Python to help you get started.
 
