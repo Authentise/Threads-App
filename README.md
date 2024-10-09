@@ -3,7 +3,7 @@
 
 We want to enable you to develop an App for Threads. An app is a tool that does something fancy with a file or a comment that's been uploaded to Threads. For example, [Plyable has an app on Threads](https://www.authentise.com/post/authentise-threads-addresses-engineering-bottlenecks-with-integrations). The Plyable app will take a STEP file uploaded to Threads, and provide a composite mold design plus associated quote and delivery information. If you're interested in creating an app of your own that could analyze a file, or provide associated information, please [contact us](https://www.authentisethreads.com/about-us/contact-us) for your username and password to access a development instance of Threads. 
 
-You can use any programming language for this project, but Python is preferred. We've provided some example code in Python to help you get started. 
+This is the base repo for creating a Threads App. You should fork this repo, and upload your submission to Github.
 
 ## API Docs
 
@@ -17,48 +17,52 @@ Once you're happy with your app and want to submit it for general distribution, 
 * We package it into a docker image we can run on AWS instance  (internal note: get mani to do this, and do a test-run)
 * We do some very basic QA, and atach aarms
 
-## Python Walkthrough
+## Getting Started
 
 ### Pre-requisites
 
-This walkthrough assumes you're using Unix, and already have `python` with `requests` installed.
+This walkthrough assumes you're using Unix, and already have `python` and [`poetry`](https://python-poetry.org/docs/#installation) installed.
 
-### Getting Started
+You should already have your Threads credentials. If not, contact <EMAIL> for help.
 
-Here is a brief script that you can use to get started. This script authenticates with the API and retrieves your threads.
+Once you have those installed, fork this repo, and clone your forked copy.
 
-```python
-#!/usr/bin/env python3
+### Project Structure
 
-import requests
-import sys
+Source code is found in the `src` folder. 
 
-BASE_URL = "https://api.threads.dev-auth2.com/v1"
+Your entrypoint will be the function called `handler()` in `src/handler.py`. Please do not change this functions arguments, and make sure it returns a dict. Please do not edit the `src/main.py` and `src/utils.py` files.
 
-# Request session for API calls
-session = requests.session()
+You are free to add new files in the `src` directory and import them as needed. You can add new 
 
-def login(username: str, password: str) -> bool:
-    # Log in, and save cookie in the session
-    response = session.post(f"{BASE_URL}/auth/login/", json={"email": username, "password": password})
-    return response.status_code == 200
+### Running the Application
 
-def main():
-    # Retrieve email and password from command line args
-    if len(sys.argv) != 3:
-        print("Usage: python3 <filename.py> <email> <password>")
-        sys.exit(1)
-    email = sys.argv[1]
-    password = sys.argv[2]
-
-    # Authenticate
-    login(email, password)
-
-    # Ready to start using the API!
-
-    # Retrieve your threads
-    threads = session.get(f"{BASE_URL}/threads").json()
+Use poetry to run the script:
+```bash
+poetry run python3 src/main.py <email> <password> --kwargs arg1=value1 arg2=value2
 ```
+
+Alternatively, you can spawn a virtual-env loaded shell via poetry:
+
+```bash
+poetry shell
+(venv) python3 src/main.py ...
+```
+
+When you run the `src/main.py` script, a wrapper function will parse command line args, and authenticate with the Threads API, and call your handler function.
+
+
+### Command Line Args
+
+You need to supply your username and password as command line args to be able to authenticate with the API. If you'd like to pass in additional information from the command line, you can supply key-value pairs like so:
+
+```bash
+... --kwargs arg1=value1 arg2=value
+```
+
+## Code Examples
+
+You can find these examples in the `src/handler.py` file.
 
 ### References
 
